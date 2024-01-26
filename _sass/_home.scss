@@ -39,3 +39,42 @@
 }
 
 
+// Hero Section
+
+.hero {
+  // background-color: $white-color;
+  background-image: url("/assets/img/clouds.jpg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  // filter: hue-rotate(40deg) blur(6px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0 4rem 0;
+    backdrop-filter: blur(8px) hue-rotate(40deg);
+    width: 100%;
+  }
+
+  .title {
+    color: $white-color;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    text-align: start;
+
+    p {
+      color: $white-color;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}

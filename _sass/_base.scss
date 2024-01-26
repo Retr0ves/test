@@ -1071,3 +1071,32 @@ nav[data-toggle="toc"] {
 #toc-sidebar {
   z-index: 1;
 }
+
+// Buttons
+.btn {
+  color: white !important;
+  background-color: black;
+  border: black;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-primary {
+  background-color: $purple-color !important;
+  border-color: $purple-color !important;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border-color: $white-color !important;
+  &:hover {
+    border-color: $purple-color !important;
+    color: $purple-color !important;
+  }
+}
