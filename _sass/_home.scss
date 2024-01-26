@@ -1,0 +1,41 @@
+/*****************************************************************************
+* Home
+*****************************************************************************/
+
+// Banner
+
+.banner {
+  background-image: url("/assets/img/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    color: $heading-color;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-top: -120px;
+
+  }
+
+  .thin {
+    color: $heading-color;
+    font-weight: 80;
+  }
+
+  .subtitle {
+    color: $heading-color;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+
