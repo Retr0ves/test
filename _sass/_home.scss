@@ -116,3 +116,25 @@
   }
   
 }
+
+// Projects Section
+.projects {
+  .project {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-bottom: 16px;
+    
+    .project-info {
+      padding-left: 0;
+    }
+
+    .project-image {
+      img {
+        object-fit: contain;
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+  }
+}
