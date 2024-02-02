@@ -76,3 +76,43 @@
     }
   }
 }
+
+// News Section
+
+.news-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  .news-date {
+    color: $heading-color;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    align-self: start;
+    width: 20%;
+    background-color: $grey-color-light;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 8px;
+  }
+
+  .news-content {
+    color: $heading-color;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: start;
+    margin-left: 20px;
+    width: 80%;
+    .news-description {
+      color: $grey-color;
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: start;
+    }
+  }
+  
+}

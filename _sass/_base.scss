@@ -1100,3 +1100,12 @@ nav[data-toggle="toc"] {
     color: $purple-color !important;
   }
 }
+
+// Section Title
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: $heading-color;
+}
