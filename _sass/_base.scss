@@ -670,12 +670,21 @@ footer.sticky-bottom {
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
+        padding-right: 0;
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
           padding-left: 1rem;
           padding-right: 1rem;
+          background-color: $contrast-color;
+          width: 100%;
+          border-radius: 8px;
+          font-size: 1rem;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          font-weight: 300;
+          text-align: center;
+          color: $white-color;
 
           a {
             color: white;
@@ -692,110 +701,138 @@ footer.sticky-bottom {
         }
       }
 
-      .title {
-        font-weight: bolder;
-      }
+      .content{
+        font-weight: 300;
+        text-align: start;
+        margin-left: 20px;
 
-      .author {
-        a {
-          border-bottom: 1px dashed var(--global-theme-color);
 
-          &:hover {
-            border-bottom-style: solid;
-            text-decoration: none;
+        .title {
+          font-weight: bolder;
+          font-size: 1.2rem;
+          color: $heading-color;
+        }
+  
+        .author {
+          color: $grey-color;
+          font-size: 1rem;
+          font-weight: 300;
+          text-align: start;
+          padding-top: 8px;
+          a {
+            border-bottom: 1px dashed var(--global-theme-color);
+  
+            &:hover {
+              border-bottom-style: solid;
+              text-decoration: none;
+            }
+          }
+  
+          >em {
+            border-bottom: 1px solid;
+            font-style: normal;
+          }
+  
+          >span.more-authors {
+            color: var(--global-text-color-light);
+            border-bottom: 1px dashed var(--global-text-color-light);
+            cursor: pointer;
+  
+            &:hover {
+              color: var(--global-text-color);
+              border-bottom: 1px dashed var(--global-text-color);
+            }
           }
         }
 
-        >em {
-          border-bottom: 1px solid;
-          font-style: normal;
-        }
-
-        >span.more-authors {
-          color: var(--global-text-color-light);
-          border-bottom: 1px dashed var(--global-text-color-light);
-          cursor: pointer;
-
-          &:hover {
-            color: var(--global-text-color);
-            border-bottom: 1px dashed var(--global-text-color);
+        .periodical {
+          color: $grey-color;
+          em {
+            color: $grey-color;
           }
         }
-      }
+  
+        .links {
+          padding-top: 8px;
 
-      .links {
-        a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
-
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+          a.btn {
+            color: $purple-color;
+            border: 1px solid $purple-color;
+            border-radius: 999rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            margin-left: 0;
+  
+            &:hover {
+              color: var(--global-theme-color);
+              border-color: var(--global-theme-color);
+            }
           }
         }
-      }
-
-      .badges {
-        padding-bottom: 0.5rem;
-        span {
-          display: inline-block;
-          color: $black-color;
-          height: 100%;
-          padding-right: 0.5rem;
-          vertical-align: middle;
-
-          &:hover {
-            text-decoration: underline;
+  
+        .badges {
+          padding-bottom: 0.5rem;
+          span {
+            display: inline-block;
+            color: $black-color;
+            height: 100%;
+            padding-right: 0.5rem;
+            vertical-align: middle;
+  
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
-      }
-
-      .hidden {
-        font-size: 0.875rem;
-        max-height: 0px;
-        overflow: hidden;
-        text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
+  
+        .hidden {
+          font-size: 0.875rem;
+          max-height: 0px;
+          overflow: hidden;
+          text-align: justify;
+          transition-property: 0.15s ease;
+          -moz-transition: 0.15s ease;
+          -ms-transition: 0.15s ease;
+          -o-transition: 0.15s ease;
+          transition: all 0.15s ease;
+  
+          p {
+            line-height: 1.4em;
+            margin: 10px;
+          }
+  
+          pre {
+            font-size: 1em;
+            line-height: 1.4em;
+            padding: 10px;
+          }
+        }
+  
+        .hidden.open {
+          max-height: 100em;
+          transition-property: 0.15s ease;
+          -moz-transition: 0.15s ease;
+          -ms-transition: 0.15s ease;
+          -o-transition: 0.15s ease;
+          transition: all 0.15s ease;
+        }
+  
+        div.abstract.hidden {
+          border: dashed 1px var(--global-bg-color);
+        }
+  
+        div.abstract.hidden.open {
+          border-color: var(--global-text-color);
         }
 
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
       }
 
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
+      
     }
   }
+
 }
 
 // Rouge Color Customization
@@ -1074,8 +1111,7 @@ nav[data-toggle="toc"] {
 
 // Buttons
 .btn {
-  color: white !important;
-  background-color: black;
+  color: white;
   border: black;
   border-width: 2px;
   border-style: solid;
@@ -1094,6 +1130,7 @@ nav[data-toggle="toc"] {
 
 .btn-outline-primary {
   background-color: transparent;
+  color: $white-color !important;
   border-color: $white-color !important;
   &:hover {
     border-color: $purple-color !important;

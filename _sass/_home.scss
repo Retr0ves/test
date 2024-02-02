@@ -93,11 +93,11 @@
     font-weight: 300;
     text-align: center;
     align-self: start;
-    width: 20%;
     background-color: $grey-color-light;
     padding-top: 4px;
     padding-bottom: 4px;
     border-radius: 8px;
+    width: 100%;
   }
 
   .news-content {
@@ -106,7 +106,6 @@
     font-weight: 300;
     text-align: start;
     margin-left: 20px;
-    width: 80%;
     .news-description {
       color: $grey-color;
       font-size: 1rem;

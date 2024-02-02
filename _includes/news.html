@@ -21,8 +21,8 @@
                   </td>
                 </tr> -->
                 <div class="news-item">
-                  <div class="news-date">{{ item.date | date: "%b %-d, %Y" }}</div>
-                  <div class="news-content">
+                  <div class="news-date col-sm-2">{{ item.date | date: "%b %-d, %Y" }}</div>
+                  <div class="news-content col-sm-10">
                     {% if item.inline -%}
                       {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
                       <p class="news-description">{{ item.description | remove: '<p>' | remove: '</p>' | emojify }}</p>
