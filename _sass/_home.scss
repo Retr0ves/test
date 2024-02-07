@@ -5,9 +5,10 @@
 // Banner
 
 .banner {
-  background-image: url("/assets/img/background.svg");
+  background-image: url("/assets/img/header.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom -50px right;
+  background-size: cover;
   height: 100vh;
   position: relative;
   width: 100%;
@@ -17,24 +18,30 @@
   flex-direction: column;
 
   .title {
-    color: $heading-color;
+    color: $white-color;
     text-align: center;
     font-size: 3.5rem;
     font-weight: 500;
-    margin-top: -120px;
-
   }
 
   .thin {
-    color: $heading-color;
-    font-weight: 80;
+    color: $white-color;
+    font-weight: 200;
   }
 
   .subtitle {
-    color: $heading-color;
+    color: $white-color;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 300;
+  }
+
+  .description {
+    color: $white-color;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 800px;
+    padding-top: 1rem;
   }
 }
 
