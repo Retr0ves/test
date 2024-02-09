@@ -6,19 +6,18 @@ layout: page
       <div class="post">
 
         <article>
-          {% if page.profiles -%}
-          {% for profile in page.profiles %}
-          <hr>
-          <div class="profile float-{%- if profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if profile.image %}
-              {%- assign profile_image_path = profile.image | prepend: 'assets/img/' -%}
+          <h3 class="title mb-4">🪪 members</h3>
+          {% if page.members -%}
+            <div class="row">
+            {% for member in page.members %}
 
-              {% if profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
-
+            <div class="col-sm-4 pb-5">
+              {%- if member.image %}
+                {%- assign profile_image_path = member.image | prepend: 'assets/img/people/' -%}
+              {%- else -%}
+                {%- assign profile_image_path = 'assets/img/people/placeholder.jpg' -%}
+              {%- endif -%}
+              {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle w-50" -%}
               {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
 
               {% include figure.html
@@ -27,25 +26,92 @@ layout: page
                 sizes = sizes
                 alt = profile.image 
               %}
-            {% endif -%}
-            {%- if profile.more_info %}
-            <div class="more-info">
-              {{ profile.more_info }}
+
+              <h5 class="name">{{ member.name }}</h5>
+              <div class="role pb-1">{{ member.role }}</div>
+              {% if member.interests %}
+                {% assign interests = member.interests | split: ", " %}
+                {% for interest in interests %}
+                  <span class="badge badge-light shadow-none rounded-pill px-2 py-1 mr-1">{{ interest }}</span>
+                {% endfor %}
+              {% endif %}
             </div>
-            {%- endif %}
-          </div>
+            {% endfor %}
+            </div>
+          {% endif %}
 
-          <div class="clearfix">
-            {% if profile.content -%}
-            {% capture profile_content %}{%- include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-            {%- else -%}
-            {{ content }}
-            {%- endif %}
-          </div>
+          <h3 class="title mb-4">🤝 friends of the lab</h3>
 
-          {% endfor %}
-          {%- endif %}
+          {% if page.friends -%}
+            <div class="row">
+            {% for member in page.friends %}
+
+            <div class="col-sm-4 pb-5">
+              {%- if member.image %}
+                {%- assign profile_image_path = member.image | prepend: 'assets/img/people/' -%}
+              {%- else -%}
+                {%- assign profile_image_path = 'assets/img/people/placeholder.jpg' -%}
+              {%- endif -%}
+              {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle w-50" -%}
+              {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+
+              {% include figure.html
+                path = profile_image_path
+                class = profile_image_class
+                sizes = sizes
+                alt = profile.image 
+              %}
+
+              <h5 class="name">{{ member.name }}</h5>
+              <div class="role pb-1">{{ member.role }}</div>
+              {% if member.interests %}
+                {% assign interests = member.interests | split: ", " %}
+                {% for interest in interests %}
+                  <span class="badge badge-light shadow-none rounded-pill px-2 py-1 mr-1">{{ interest }}</span>
+                {% endfor %}
+              {% endif %}
+            </div>
+            {% endfor %}
+            </div>
+          {% endif %}
+
+
+          <h3 class="title mb-4">👨‍🎓 alumni</h3>
+
+          {% if page.alumni -%}
+            <div class="row">
+            {% for member in page.alumni %}
+
+            <div class="col-sm-4 pb-5">
+              {%- if member.image %}
+                {%- assign profile_image_path = member.image | prepend: 'assets/img/people/' -%}
+              {%- else -%}
+                {%- assign profile_image_path = 'assets/img/people/placeholder.jpg' -%}
+              {%- endif -%}
+              {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle w-50" -%}
+              {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+
+              {% include figure.html
+                path = profile_image_path
+                class = profile_image_class
+                sizes = sizes
+                alt = profile.image 
+              %}
+
+              <h5 class="name">{{ member.name }}</h5>
+              <div class="role pb-1">{{ member.role }}</div>
+              {% if member.interests %}
+                {% assign interests = member.interests | split: ", " %}
+                {% for interest in interests %}
+                  <span class="badge badge-light shadow-none rounded-pill px-2 py-1 mr-1">{{ interest }}</span>
+                {% endfor %}
+              {% endif %}
+            </div>
+            {% endfor %}
+            </div>
+          {% endif %}
+
         </article>
 
 </div>
+

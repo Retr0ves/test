@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: people
-description: members of the lab or group
+description: meet the people behind the research
 nav: true
 nav_order: 7
 
@@ -25,4 +25,73 @@ profiles:
       <p>555 your office number</p>
       <p>123 your address street</p>
       <p>Your City, State 12345</p>
+
+members:
+  - name: Raja Sambasivan
+    image: raja_sambasivan_resized.png
+    interests:
+    role: Assistant Professor
+
+  - name: Max Liu
+    image: max_liu.jpeg
+    interests: Distributed Systems, Microservices
+    role: Ph.D Student, Tufts University
+
+  - name: Darby Huye
+    image: darby_huye.png
+    interests: Distributed Tracing & Observability, Visualization, Distributed Systems
+    role: Ph.D Student, Tufts University
+
+  - name: Zhaoqi (Roy) Zhang
+    image: zhaoqi_zhang.jpg
+    interests: Distributed Systems, Kernel tracing, Networks
+    role: Ph.D Student, Tufts University
+
+  - name: Tomislav Žabčić-Matić
+    image: tomislav_zm.png
+    interests: Data Systems, Stream Processing, Distributed Systems
+    role: Ph.D Student, Tufts University
+
+  - name: Sarah Abowitz
+    image: sarah_abowitz.jpeg
+    interests: Network Security, Debugging, Distributed Systems
+    role: Ph.D Student, Tufts University
+
+  - name: Joey Dong
+    image: joey.jpeg
+    interests: Computer Science, Engineering
+    role: High School MIT PRIMES student
+
+  - name: Anshul Rastogi
+    image:
+    interests: Computer Science, Mathematics
+    role: High School MIT PRIMES student
+
+friends:
+  - name: Mert Toslali
+    image: mert_toslali_resized.png
+    role: Ph.D. Candidate, Boston University
+    advisor: Ayse Coskun
+
+  - name: Mania Abdi
+    image: mania_abdi.jpg
+    role: Ph.D. Candidate, Northeastern University
+    advisor: Peter Desnoyers
+
+alumni:
+  - name: Emre Ates
+    image: emre_ates_cropped.png
+    role: PhD, 2020, Boston University
+    next_steps: Google
+
+  - name: Alex Ellis
+    image: alex_ellis.png
+    role: MS, 2021, Tufts University
+    next_steps: Google
+
+  - name: Tanmay Gupta
+    image: tanmay_gupta.jpeg
+    role: High School MIT PRIMES student
+    next_steps: Finish High School
+    
 ---
