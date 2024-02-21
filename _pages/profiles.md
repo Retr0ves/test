@@ -57,15 +57,14 @@ members:
     interests: Network Security, Debugging, Distributed Systems
     role: Ph.D Student, Tufts University
 
-  - name: Joey Dong
-    image: joey.jpeg
-    interests: Computer Science, Engineering
-    role: High School MIT PRIMES student
-
-  - name: Anshul Rastogi
-    image:
+  - name: Adrita Samanta
+    image: adrita_samanta.jpeg
     interests: Computer Science, Mathematics
-    role: High School MIT PRIMES student
+
+  - name: Govind Velamoor
+    image: govind_velamoor.jpg
+    interests:  Computer Science, Math, Robotics
+
 
 friends:
   - name: Mert Toslali
@@ -93,5 +92,13 @@ alumni:
     image: tanmay_gupta.jpeg
     role: High School MIT PRIMES student
     next_steps: Finish High School
+
+  - name: Joey Dong
+    image: joey.jpeg
+    interests: Computer Science, Engineering
+
+  - name: Anshul Rastogi
+    image: 
+    interests: Computer Science, Mathematics
     
 ---
