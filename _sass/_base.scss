@@ -17,7 +17,8 @@ li,
 span,
 strong {
   color: var(--global-text-color);
-  font-family: 'DM Sans', sans-serif;
+  // font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 hr {
@@ -875,6 +876,17 @@ html.transition *:after {
 
 // Extra Markdown style (post Customization)
 .post {
+  .post-header {
+    .post-title {
+      color: $heading-color;
+    }
+    .post-description {
+      color: $grey-color;
+    }
+  }
+  h2 {
+    color: $heading-color;
+  }
   .post-meta {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
@@ -1113,8 +1125,6 @@ nav[data-toggle="toc"] {
 // Buttons
 .btn {
   color: white;
-  border: black;
-  border-width: 2px;
   border-style: solid;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -1129,10 +1139,11 @@ nav[data-toggle="toc"] {
   border-color: $purple-color !important;
 }
 
-.btn-outline-primary {
+.btn-outline {
   background-color: transparent;
-  color: $white-color !important;
-  border-color: $white-color !important;
+  color: $heading-color !important;
+  border-color: $grey-color-light !important;
+  border: 2px solid;
   &:hover {
     border-color: $purple-color !important;
     color: $purple-color !important;
