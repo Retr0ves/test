@@ -58,7 +58,7 @@ members:
     role: Ph.D Student, Tufts University
 
   - name: Adrita Samanta
-    image: adrita_samanta.jpeg
+    image: adrita_samanta.jpg
     interests: Computer Science, Mathematics
 
   - name: Govind Velamoor
