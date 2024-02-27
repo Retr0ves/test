@@ -48,3 +48,55 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/*****************************************************************************
+* Fun / Events
+*****************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+// body {
+//   background-color: #eee;
+//   overflow-y: scroll;
+//   -webkit-overflow-scrolling: touch;
+// }
+
+.waterfall-grid {
+  column-count: 3;
+  column-width: 220px;
+}
+
+.waterfall-item {
+  width: 100%;
+	max-width: 100%;
+	margin-bottom: 16px;
+  position: relative;
+
+  img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .overlay {
+    transition: .5s ease;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+  }
+
+  &:hover img{
+    opacity: 0.3;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}

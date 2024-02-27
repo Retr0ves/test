@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+<!-- fun.html -->
+<div class="waterfall-grid">
+{% for img in page.images %}
+  {%- if img.src %}
+    {%- assign image_path = img.src | prepend: '../assets/img/fun/' -%}
+  {%- else -%}
+    {%- assign image_path = 'assets/img/people/placeholder.jpg' -%}
+  {%- endif -%}
+  {%- assign image_class = "img-fluid " -%}
+  {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+  <div class="waterfall-item">
+    <img class="{{ image_class }}"  sizes="{{ sizes }}" srcset="{{ image_path | resize: 30 }} 300w, {{ image_path | resize: 600 }} 600w, {{ image_path | resize: 900 }} 900w, {{ image_path | resize: 1200 }} 1200w, {{ image_path | resize: 1500 }} 1500w, {{ image_path | resize: 1800 }} 1800w, {{ image_path | resize: 2100 }} 2100w, {{ image_path | resize: 2400 }} 2400w" alt="{{ img.alt }}">
+    <div class="overlay">
+      {{ img.title }}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+
