@@ -59,10 +59,12 @@ members:
 
   - name: Adrita Samanta
     image: adrita_samanta.jpg
+    role: High School MIT PRIMES student
     interests: Computer Science, Mathematics
 
   - name: Govind Velamoor
     image: govind_velamoor.jpg
+    role: High School MIT PRIMES student
     interests:  Computer Science, Math, Robotics
 
 
@@ -95,10 +97,12 @@ alumni:
 
   - name: Joey Dong
     image: joey.jpeg
+    role: High School MIT PRIMES student
     interests: Computer Science, Engineering
 
   - name: Anshul Rastogi
     image: 
+    role: High School MIT PRIMES student
     interests: Computer Science, Mathematics
     
 ---
