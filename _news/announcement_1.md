@@ -1,9 +1,9 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-06-01 15:59:00-0400
 inline: true
 related_posts: false
-description: "This is a simple inline announcement. It can be used to highlight a new feature or a new paper."
+description: "Congrats, Darby!"
 ---
 
-A simple inline announcement.
+Darby is headed to Meta for an internship this summer.
