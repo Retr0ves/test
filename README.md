@@ -85,7 +85,7 @@ Each project page is consists of four main sections:
   ```
   You would add the following to the project's front matter:
   ```yaml
-  related_publications: alshamali2021
+  related_publications: Sambasivan:2017jb
   ```
   If you have multiple publications, you can add them as a list separated by a comma.
 
