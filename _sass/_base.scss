@@ -1158,3 +1158,15 @@ nav[data-toggle="toc"] {
   margin-bottom: 1.5em;
   color: $heading-color;
 }
+
+// Footer
+// .footer {
+//   // background-color: $background-color;
+// }
+
+.heading-color {
+  color: $heading-color;
+  & > * {
+    color: $heading-color;
+  }
+}

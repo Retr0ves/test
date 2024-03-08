@@ -146,12 +146,16 @@
 }
 
 // Sponsor Section
+.sponsor-section {
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
 .sponsor-title {
   color: $heading-color;
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
-  margin-top: 6rem;
 }
 
 .sponsor-description {

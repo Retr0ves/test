@@ -27,7 +27,12 @@ layout: page
                 alt = profile.image
               %}
 
-              <h5 class="name">{{ member.name }}</h5>
+              {% if member.link %}
+                <a href="{{ member.link }}" class="name"><h5 class="name">{{ member.name }}</h5></a>
+              {% else %}
+                <h5 class="name">{{ member.name }}</h5>
+              {% endif %}
+              
               <div class="role pb-1">{{ member.role }}</div>
               {% if member.interests %}
                 {% assign interests = member.interests | split: ", " %}

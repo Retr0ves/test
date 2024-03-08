@@ -31,6 +31,7 @@ members:
     image: raja_sambasivan_resized.png
     interests:
     role: Assistant Professor
+    link: https://raja.cs.tufts.edu/
 
   - name: Max Liu
     image: max_liu.jpeg
@@ -41,6 +42,7 @@ members:
     image: darby_huye.png
     interests: Distributed Tracing & Observability, Visualization, Distributed Systems
     role: Ph.D Student, Tufts University
+    link: https://www.darbyhuye.com/
 
   - name: Zhaoqi (Roy) Zhang
     image: zhaoqi_zhang.jpg

@@ -6,9 +6,9 @@
             <div class="project">
               
               <div class="project-info {% if project.img %} col-sm-7 {% else %} col-sm-12 {% endif %}">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-                <a href="{{ project.url }}" class="btn btn-primary rounded-pill">View Project</a>
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p class="project-description">{{ project.description }}</p>
+                <a href="{{ project.url | relative_url }}" class="btn btn-outline rounded-pill">View Project</a>
               </div>
 
               {% if project.img %}
