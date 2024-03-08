@@ -6,37 +6,34 @@ description: "Lab activities and fun stuff in the lab"
 nav: true
 nav_order: 6
 images: 
-  - src: 11.jpg
+  - src: NSDI-2022.jpeg
     title: "Space Needle in Seattle"
-    description: "April 2022, while attending NSDI '22"
-    date: ""
+    description: "while attending NSDI '22"
+    date: April 2022"
     link: ""
-  - src: 2.jpg
+  - src: holiday-celebration-dec-2022.jpeg
+    title: "Lab Holiday Party"
+    description: ""
+  - src: holiday-lab-party.jpeg
     title: "Lab Holiday Party"
     description: "December 2021, helping Raja decorate his new office with planes & plants :)"
     link: ""
-  - src: 8.jpg
+  - src: end-of-semester-paint-night.jpeg
+    title: "End of semester paint night"
+    description: ""
+  - src: event.jpeg
     title: ""
     description: ""
-  - src: 6.jpg
-    title: ""
+  - src: hotpot_dec_2021_before.jpeg
+    title: "Hotpot"
     description: ""
-  - src: 7.jpg
-    title: ""
+  - src: kite-flying.jpeg
+    title: "Kite flying"
     description: ""
-  - src: 12.jpg
-    title: ""
+  - src: socc-2021.jpeg
+    title: "SoCC 2021"
     description: ""
-  - src: 11.jpg
-    title: ""
-    description: ""
-  - src: 2.jpg
-    title: ""
-    description: ""
-  - src: 4.jpg
-    title: ""
-    description: ""
-  - src: 3.jpg
+  - src: event-1.jpeg
     title: ""
     description: ""
 ---
