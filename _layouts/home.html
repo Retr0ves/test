@@ -25,7 +25,7 @@
 
       <!-- News -->
       {% if page.news and site.announcements.enabled -%}
-        <h2 class="section-title"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">📰 news</a></h2>
+        <h2 class="section-title"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
         {%- include news.html limit=true %}
       {%- endif %}
 
@@ -37,7 +37,7 @@
 
       <!-- Projects -->
       {% if page.projects -%}
-        <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">🗂️ projects</a></h2>
+        <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">projects</a></h2>
         {%- include selected_projects.html %}
       {%- endif %}
 
