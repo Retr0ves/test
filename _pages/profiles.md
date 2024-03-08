@@ -74,12 +74,10 @@ friends:
   - name: Mert Toslali
     image: mert_toslali_resized.png
     role: Ph.D. Candidate, Boston University
-    advisor: Ayse Coskun
 
   - name: Mania Abdi
     image: mania_abdi.jpg
     role: Ph.D. Candidate, Northeastern University
-    advisor: Peter Desnoyers
 
 alumni:
   - name: Emre Ates
