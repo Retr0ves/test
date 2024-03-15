@@ -25,7 +25,8 @@
 
   .thin {
     color: $white-color;
-    font-weight: 200;
+    font-weight: 100;
+    font-family: inherit;
   }
 
   .subtitle {
@@ -107,11 +108,16 @@
   }
 
   .news-content {
-    color: $heading-color;
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-align: start;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h5 {
+      color: $heading-color;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-align: start;
+      line-height: 2rem;
+    }
     .news-description {
       color: $grey-color;
       font-size: 1rem;
