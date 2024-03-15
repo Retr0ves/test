@@ -1,7 +1,7 @@
 ---
 layout: about
-title: 👋 reachout
-permalink: /reachout
+title: 👋 join us
+permalink: /joinus
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
