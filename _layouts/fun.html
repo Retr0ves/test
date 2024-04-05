@@ -15,7 +15,9 @@ layout: page
   <div class="waterfall-item">
     <img class="{{ image_class }}"  sizes="{{ sizes }}" srcset="{{ image_path | resize: 30 }} 300w, {{ image_path | resize: 600 }} 600w, {{ image_path | resize: 900 }} 900w, {{ image_path | resize: 1200 }} 1200w, {{ image_path | resize: 1500 }} 1500w, {{ image_path | resize: 1800 }} 1800w, {{ image_path | resize: 2100 }} 2100w, {{ image_path | resize: 2400 }} 2400w" alt="{{ img.alt }}">
     <div class="overlay">
-      {{ img.title }}
+      <div class="title">{{ img.title }}</div>
+      <div class="description">{{ img.description }}</div>
+      <div class="date">{{ img.date }}</div>
     </div>
   </div>
 {% endfor %}
