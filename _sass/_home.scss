@@ -138,6 +138,7 @@
     justify-content: space-between;
     flex-direction: row;
     padding-bottom: 16px;
+    min-height: 200px;
     
     .project-info {
       padding-left: 0;
@@ -148,6 +149,16 @@
         object-fit: contain;
         border-radius: 8px;
         width: 100%;
+      }
+    }
+
+    .project-btn {
+      color: $heading-color;
+
+      &:hover {
+        color: $contrast-color;
+        text-decoration: underline;
+        transition: all 0.3s ease;
       }
     }
   }
