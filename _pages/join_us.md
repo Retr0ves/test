@@ -1,7 +1,8 @@
 ---
 layout: about
 title: 👋 join us
-permalink: /joinus
+permalink: /join-us
+
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
@@ -14,7 +15,7 @@ profile:
     <p>Your City, State 12345</p>
 
 nav: true
-nav_order: 10
+nav_order: 7
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
