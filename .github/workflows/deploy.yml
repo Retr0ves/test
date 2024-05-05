@@ -49,10 +49,10 @@ jobs:
           ARGS: "-rlgoDzvc -i"
           SOURCE: "_site/"
           REMOTE_HOST: "linux.eecs.tufts.edu"
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          TARGET: "~/public_html/docc_lab_site"
+          REMOTE_USER: "raja"
+          TARGET: "~/docc_lab_site"
           SCRIPT_BEFORE: |
-            cd ~/public_html
+            cd ~
             mkdir docc_lab_site
             whoami
             ls -al
