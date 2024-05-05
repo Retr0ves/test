@@ -19,51 +19,48 @@ jobs:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2.2'
-        bundler-cache: true
-    - name: Update _config.yml ⚙️
-      uses: fjogeleit/yaml-update-action@v0.13.1
-      with:
-        commitChange: false
-        valueFile: '_config.yml'
-        propertyPath: 'giscus.repo'
-        value: ${{ github.repository }}
-    - name: Install and Build 🔧
-      run: |
-        pip3 install --upgrade jupyter
-        npm install -g mermaid.cli
-        npm install -g purgecss
-        export JEKYLL_ENV=production
-        bundle exec jekyll build --lsi
-        purgecss -c purgecss.config.js
-     - name: Deploy 🚀
-      if: github.event_name != 'pull_request'
-      env:
-        SSH_USER: ${{ secrets.SSH_USER }}
-        SSH_HOST: linux.eecs.tufts.edu  
-        SSH_PORT: 22 
-      uses: easingthemes/ssh-deploy@main
-      with:
-        SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
-        ARGS: "-rlgoDzvc -i"
-        SOURCE: "_site/"
-        REMOTE_HOST: $SSH_HOST
-        REMOTE_USER: $SSH_USER
-        TARGET: "~/public_html/docc_lab_site"
-        SCRIPT_BEFORE: |
-          cd ~/public_html
-          mkdir docc_lab_site
-          whoami
-          ls -al
-        SCRIPT_AFTER: |
-          whoami
-          ls -al
-          echo $RSYNC_STDOUT
-
-
-
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.2"
+          bundler-cache: true
+      - name: Update _config.yml ⚙️
+        uses: fjogeleit/yaml-update-action@v0.13.1
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "giscus.repo"
+          value: ${{ github.repository }}
+      - name: Install and Build 🔧
+        run: |
+          pip3 install --upgrade jupyter
+          npm install -g mermaid.cli
+          npm install -g purgecss
+          export JEKYLL_ENV=production
+          bundle exec jekyll build --lsi
+          purgecss -c purgecss.config.js
+      - name: Deploy 🚀
+        if: github.event_name != 'pull_request'
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: linux.eecs.tufts.edu
+          SSH_PORT: 22
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "_site/"
+          REMOTE_HOST: $SSH_HOST
+          REMOTE_USER: $SSH_USER
+          TARGET: "~/public_html/docc_lab_site"
+          SCRIPT_BEFORE: |
+            cd ~/public_html
+            mkdir docc_lab_site
+            whoami
+            ls -al
+          SCRIPT_AFTER: |
+            whoami
+            ls -al
+            echo $RSYNC_STDOUT
