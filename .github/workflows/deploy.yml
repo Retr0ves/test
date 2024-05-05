@@ -41,6 +41,10 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build --lsi
           purgecss -c purgecss.config.js
+      - name: Test 🧪
+        run: |
+          echo "Testing..."
+          echo ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: easingthemes/ssh-deploy@main
