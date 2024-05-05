@@ -43,17 +43,13 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
-        env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: linux.eecs.tufts.edu
-          SSH_PORT: 22
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
           ARGS: "-rlgoDzvc -i"
           SOURCE: "_site/"
-          REMOTE_HOST: $SSH_HOST
-          REMOTE_USER: $SSH_USER
+          REMOTE_HOST: "linux.eecs.tufts.edu"
+          REMOTE_USER: ${{ secrets.SSH_USER }}
           TARGET: "~/public_html/docc_lab_site"
           SCRIPT_BEFORE: |
             cd ~/public_html
