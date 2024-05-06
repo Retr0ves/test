@@ -52,7 +52,8 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           # Adding a newline to the end of the private key
-          SSH_PRIVATE_KEY: ${{ format('{0}{1}', secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS, '\n') }}
+          # SSH_PRIVATE_KEY: ${{ format('{0}{1}', secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS, '\n') }}
+          SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
           ARGS: "-rlgoDzvc -i"
           SOURCE: "_site/"
           REMOTE_HOST: "linux.eecs.tufts.edu"
