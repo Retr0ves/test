@@ -51,7 +51,8 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: easingthemes/ssh-deploy@main
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
+          # Adding a newline to the end of the private key
+          SSH_PRIVATE_KEY: ${{ format('{0}{1}', secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS, '\n') }}
           ARGS: "-rlgoDzvc -i"
           SOURCE: "_site/"
           REMOTE_HOST: "linux.eecs.tufts.edu"
