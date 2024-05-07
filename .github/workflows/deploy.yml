@@ -59,12 +59,3 @@ jobs:
           REMOTE_HOST: "linux.eecs.tufts.edu"
           REMOTE_USER: "raja"
           TARGET: "~/docc_lab_site"
-          SCRIPT_BEFORE: |
-            cd ~
-            mkdir docc_lab_site
-            whoami
-            ls -al
-          SCRIPT_AFTER: |
-            whoami
-            ls -al
-            echo $RSYNC_STDOUT
