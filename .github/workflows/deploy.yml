@@ -47,15 +47,20 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build --lsi
           purgecss -c purgecss.config.js
+      - name: Prepare SSH key 🔑
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -t ed25519 -p 22 linux.eecs.tufts.edu >> ~/.ssh/known_hosts
+          echo "✅ SSH key ready"
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
-        uses: easingthemes/ssh-deploy@main
-        with:
-          # Adding a newline to the end of the private key
-          # SSH_PRIVATE_KEY: ${{ format('{0}{1}', secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS, '\n') }}
-          SSH_PRIVATE_KEY: ${{ secrets.ID_ED25519_GITHUB_HALLIGAN_SERVERS }}
-          ARGS: "-rlgoDzvc -i"
-          SOURCE: "_site/"
-          REMOTE_HOST: "linux.eecs.tufts.edu"
-          REMOTE_USER: "raja"
-          TARGET: "~/docc_lab_site"
+        env:
+          SSH_USER: 'raja'
+          SSH_HOST: 'linux.eecs.tufts.edu'
+          SSH_PORT: 22
+          SSH_TARGET_DIR: "/r/docclab/test"
+          PUBLIC_HTML: "_site/"
+        run: |
+          rsync -e "ssh -p $SSH_PORT" -P -rvzc --delete --chmod=Du=rwx,Dg=rwxs,Do=rx,Fu=rw,Fg=rw,Fo=r --perms $PUBLIC_HTML/ $SSH_USER@$SSH_HOST:$SSH_TARGET_DIR --cvs-exclude
