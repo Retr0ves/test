@@ -60,7 +60,7 @@ jobs:
           SSH_USER: 'raja'
           SSH_HOST: 'linux.eecs.tufts.edu'
           SSH_PORT: 22
-          SSH_TARGET_DIR: "/r/docclab/test"
+          SSH_TARGET_DIR: "/r/docclab/public_html"
           PUBLIC_HTML: "_site/"
         run: |
           rsync -e "ssh -p $SSH_PORT" -P -rvzc --delete --chmod=Du=rwx,Dg=rwxs,Do=rx,Fu=rw,Fg=rw,Fo=r --perms $PUBLIC_HTML/ $SSH_USER@$SSH_HOST:$SSH_TARGET_DIR --cvs-exclude
